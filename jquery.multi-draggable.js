@@ -22,7 +22,7 @@
     $.ui.plugin.add('draggable', 'multiple', {
         prepare: function (evt) {
             var $this = $(this),
-                inst = $this.data('ui-draggable');
+                inst = $this.data('draggable');
 
             if (inst.options.multiple == true) {
                 inst.options._selected = $(inst.options.selected);
@@ -52,7 +52,7 @@
             }
         },
         stop: function (evt, ui) {
-            var inst = $(this).data('ui-draggable');
+            var inst = $(this).data('draggable');
 
             if (inst.options.multiple == true) {
                 var helperStartPos = ui.helper.data('startPosition'),
